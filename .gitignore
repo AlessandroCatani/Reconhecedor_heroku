@@ -1,0 +1,10 @@
+.env/*
+settings.json
+bsl/dataset/*
+bsl/T1/*
+bsl/Tes*
+bsl/erro/*
+dist/*
+build/*
+dataset/*/*
+node_modules/*
