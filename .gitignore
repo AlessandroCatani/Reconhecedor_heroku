@@ -1,5 +1,4 @@
 .env/*
-settings.json
 bsl/dataset/*
 bsl/T1/*
 bsl/Tes*
