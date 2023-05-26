@@ -1,0 +1,42 @@
+{
+    "PATHMODEL" : "\\models",
+    "NAMEMODEL" : "modelTensorFlow_bsl-10_05_2023_New_Dataset_TestCamAlessandroMEDIAPIPE_CUT_10-5_epochs-10_size-(224,224)_typeModel-Sequential_optimizer-adam_classNames-21_Count-1",
+    "PATHDATASET" : "",
+
+    "PATHMODEL-STREAMLIT" : "/models",
+    "NAMEMODEL-STREAMLIT" : "/modelTensorFlow_bsl-10_05_2023_New_Dataset_TestCamAlessandroMEDIAPIPE_CUT_10-5_epochs-10_size-(224,224)_typeModel-Sequential_optimizer-adam_classNames-21_Count-1",
+    "PATHIMAGEPREDICTOR-STREAMLIT" : "/efs/tmp/imagePredictor.jpg",
+    "PATHCONFIGMODEL-STREAMLIT" : "/models/configs",
+   
+
+    "TRAIN": "***Parametos de Treino***",
+    "PATHMODELTRAIN" : "\\models",
+    "NAMEMODELTRAIN" : "modelTensorFlow_typeModel-Sequential_optimizer-adam_classNames-21",
+    "PATHMODELCONFIGTRAIN" : "D:\\Projects_Python\\Prototipo-Modelo-de-reconhecimento-de-gestos\\models\\configs",
+    "NAMEDATASETTRAIN" : "D:\\Projects_Python\\Prototipo-Modelo-de-reconhecimento-de-gestos\\bsl\\TestCamAlessandroMEDIAPIPE_CUT",
+    "NAMEDATASETVAL" : "D:\\Projects_Python\\Prototipo-Modelo-de-reconhecimento-de-gestos\\bsl\\TestCamAlessandroMEDIAPIPE_CUT"  ,
+    "TYPEMODEL" : "Sequential",
+    "OPTIMIZER" : "adam",
+    "EPOCHS" : "10",
+    "OBS" : "10_05_2023_New_Dataset_TestCamAlessandroMEDIAPIPE_CUT",
+
+    "RETRAIN": "***Parametos de Retreino***",
+    "PATHMODELRETRAIN" : "\\models",
+    "NAMEMODELRETRAIN" : "modelTensorFlow_TestCam_MEDIAPIPE_CUT-Teste_activation='softmax'_25-4_epochs-2_size-(224,224)_typeModel-Sequential_optimizer-adam_classNames-21_Count-1",
+    "PATHMODELCONFIGRETRAIN" : "D:\\Projects_Python\\Prototipo-Modelo-de-reconhecimento-de-gestos\\models\\configs",
+    "NAMEDATASETRETRAIN" : "D:\\Projects_Python\\Prototipo-Modelo-de-reconhecimento-de-gestos\\dataset\\TestCam_MEDIAPIPE_CUT\\train",
+    "NAMEDATASETREVAL" : "D:\\Projects_Python\\Prototipo-Modelo-de-reconhecimento-de-gestos\\bls\\TestCamVivi_MEDIAPIPE_CUT\\val"  ,
+    "TYPEMODELRETRAIN" : "Sequential",
+    "OPTIMIZERRETRAIN" : "adam",
+    "EPOCHSRETRAIN" : "5",
+
+
+    "PLOT" : "***Parametos de PLOT***",
+    "NAMEMODELPLOT" : "modelTensorFlow_BEST_MODEL_TestCam_MEDIAPIPE_CUT_22-4_epochs-20_size-(256,256)_typeModel-Sequential_optimizer-adam_classNames-21_1",
+
+    "RECOGNIZER" : "***Parametos de reconhecimento***",
+    "PATHIMAGEPREDICTOR" : "D:\\Projects_Python\\Prototipo-Modelo-de-reconhecimento-de-gestos\\efs\\tmp\\imagePredictor.jpg",
+    "PATHCONFIGMODEL" : "D:\\Projects_Python\\Prototipo-Modelo-de-reconhecimento-de-gestos\\models\\configs",
+    "MODE" : "DEBUG",
+    "PALAVRAS" : "['Amor','Ar','Ave','Bola','Bonito','Cama','Carro','Casa','Cinema','Comida','Cor','Dente','Dia','Doce','Elefante','Estrada','Falar','Felicidade','Festa','Fogo','Gente','Guitarra','Idade','Imagem','Janela','Jardim','Lago','Laranja','Ler','Luz','Mar','Mesa','Montanha','Noite','Nuvem','Oceano','Pessoa','Piano','Pintura','Praia','Rio','Rosa','Sorvete','Sol','Tempo','Terra','Universo','Vento','Verde','Viagem','Vida']"
+}

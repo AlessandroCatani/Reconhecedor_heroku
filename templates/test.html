@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Testes de impressão</title>
+    <link rel="stylesheet" href="https://unpkg.com/primevue/resources/themes/saga-blue/theme.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primevue/resources/primevue.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/primeicons/primeicons.css" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="https://unpkg.com/primevue@next"></script>
+  </head>
+  <body>
+    <h1>Testes de impressão</h1>
+    <p>
+      <button v-on:click="captureImage">Capturar Imagem</button>
+    </p>
+    <p v-if="capturedImage">
+      <img :src="capturedImage" />
+    </p>
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            capturedImage: null
+          };
+        },
+        methods: {
+          captureImage() {
+            fetch("/capture")
+              .then(response => {
+                if (response.ok) {
+                  this.capturedImage = "/static/capture.jpg?" + Date.now();
+                } else {
+                  alert("Ocorreu um erro ao capturar a imagem.");
+                }
+              })
+              .catch(error => {
+                alert("Ocorreu um erro ao capturar a imagem.");
+              });
+          }
+        }
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>

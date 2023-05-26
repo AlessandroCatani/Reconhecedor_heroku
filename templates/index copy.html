@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Aplicativo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #8ef10b;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .video-container {
+            margin-bottom: 20px;
+        }
+
+        #video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+        #text-reconhecido {
+            color: #ff0000;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #random-word {
+            color: #0000ff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #letter-input {
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        #btn-submit {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4caf50;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo ao Meu Aplicativo</h1>
+    <h1>Reconhecimento de gestos</h1>
+      <img id="processed-image" src="{{ url_for('video_feed') }}">
+    <h1>Conteúdo da variável texto:</h1>
+      <p id="texto-atualizado">{{ textReconhecido }}</p>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+          function atualizarTexto() {
+              $.get('/atualizar_texto', function(data) {
+                  $('#texto-atualizado').text(data.texto);
+              });
+          }
+      
+          // Chama a função para atualizar o texto a cada 5 segundos
+          setInterval(atualizarTexto, 1000);
+      </script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            function atualizar_letra_reconhecida() {
+                $.get('/atualizar_letra_reconhecida', function(data) {
+                    $('#letra_reconhecida').text(data.texto);
+                });
+            }
+      
+            // Chama a função para atualizar o texto a cada 1 segundos
+            setInterval(atualizarTexto, 1000);
+      </script>
+      <h1>Palavra Aleatória:</h1>
+      <p>{{ palavra }}</p>
+
+    <!-- <script>
+        // Atualiza a imagem exibida na tela a cada 100ms
+        setInterval(function() {
+            var img = document.getElementById('processed-image');
+            img.src = '{{ url_for("video_feed") }}?' + new Date().getTime();
+        }, 100);
+    </script> -->
+</body>
+</html>
