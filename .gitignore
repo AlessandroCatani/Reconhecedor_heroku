@@ -7,3 +7,7 @@ dist/*
 build/*
 dataset/*/*
 node_modules/*
+requirementsProd.txt
+requirementsOld.txt
+app.cpython-38.pyc
+.env/*
